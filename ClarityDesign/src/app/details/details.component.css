@@ -1,0 +1,42 @@
+form {
+    display: inline-block;
+}
+.form-group {
+    text-align: center;
+    padding-bottom: 25px;
+}
+#todo {
+    margin: 0 auto;
+    width: 500px;
+}
+
+a.close {
+  float: right;
+}
+
+#todobox{
+    position : absolute;
+    margin : auto;
+    width : 60%;
+    height: 60%;
+    top:120px;  bottom:0; left:0; right : 0;
+    overflow-y: scroll;
+    border : 2px solid gray;
+    box-shadow: 1px;
+    border-radius : 10px;
+}
+#listItem{
+border : 1px solid gray;
+    box-shadow: 1px;
+    border-radius : 5px;
+    margin : 3px; 
+    padding:  10px;
+    width : 100%;
+    background-color: cadetblue;
+}
+#todo li:hover{
+    padding : 4px 0px 0px 4px;
+}
+.strike{
+    text-decoration:line-through;
+}

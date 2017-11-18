@@ -1,0 +1,19 @@
+<div class="container">
+<ul>
+<li *ngFor="let card of usercards" style="display : inline-block; padding : 10px 10px 10px 10px;">  
+<div class="card" style="width: 20rem;">
+  <img class="card-img-top" src="../user.jpg" alt="User Image" style="width : 100px;height:100px;">
+  <div class="card-block" style="padding-left:10px;">
+    <h4 class="card-title">Name : {{card.name}}</h4>
+    <p class="card-text">User ID : {{card.username}}</p>
+    <p class="card-text">Email : {{card.email}}</p>
+    <div class="card-footer">
+     <button class="btn btn-primary" (click)="redirect(card.id)">View Todos
+     </button>
+
+    </div>
+    </div>
+  </div>
+  </li>
+</ul>
+</div>

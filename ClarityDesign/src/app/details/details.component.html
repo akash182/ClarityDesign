@@ -1,0 +1,31 @@
+
+<div id="todobox">
+<div class="header text-center">
+      <h1>To-Do List</h1>
+</div>
+<div id="list">
+    <ul class="list-unstyled" id="todo" >
+      <li *ngFor="let task of todolist" >
+        <div style="display : inline-block;" id="listItem"  *ngIf="showItem[task.id]">
+        <span style="padding-left: 10px;">  {{task.title}}</span>
+        <span style="float : right;margin-top: -3px;" title="Delete task">
+          <button type="button" class="close" aria-label="Close" (click)="hide(task.id)">
+  <span aria-hidden="true">&times;</span>
+</button>
+        </span>
+        <span style="float : right;"> <input type="checkbox" [(ngModel)]="task.status" value="{{task.status}}" />
+        </span>
+        </div>
+      </li>
+    </ul>
+    </div>
+<div class="form-group">
+    <form role="form">
+        <input type="text" class="form-control" placeholder="Your Task" name="task" [(ngModel)]="taskDetail">
+    </form>
+    <button type="button" class="btn btn btn-primary" (click)="addtask()">Add</button>
+        </div>
+</div>
+<div class="text-center" style="padding-top: 40px;">
+  <button type="button" class="btn btn btn-primary" (click)="savelist()">Save List</button>
+</div>
